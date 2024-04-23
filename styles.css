@@ -1,0 +1,62 @@
+/* CSS for index.html */
+
+/* CSS Variables & Fallbacks */
+:root {
+    --main-color: #3498db;
+    --fallback-color: blue;
+    --main-font: Arial, sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: var(--main-font);
+    background-color: #b94141;
+    color: var(--main-color, --fallback-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Text Styles */
+h1, h2, h3, h4 {
+    color: var(--main-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Box Model */
+ul li {
+    border: 1px solid var(--main-color);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Pseudo-class */
+ul li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Layouts - Flexbox */
+h4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsiveness - Media Query */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
